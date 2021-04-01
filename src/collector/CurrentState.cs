@@ -1,4 +1,4 @@
-namespace web
+namespace BonsaiSense.Collector
 {
     public class CurrentState
     {

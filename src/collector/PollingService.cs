@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace web
+namespace BonsaiSense.Collector
 {
     internal class PollingService : IHostedService
     {

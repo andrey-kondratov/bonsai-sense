@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace web
+namespace BonsaiSense.Collector
 {
     public class Startup
     {

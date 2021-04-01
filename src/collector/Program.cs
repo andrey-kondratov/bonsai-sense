@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace web
+namespace BonsaiSense.Collector
 {
     public class Program
     {
