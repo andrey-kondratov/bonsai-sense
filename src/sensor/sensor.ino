@@ -3,8 +3,11 @@
 #include <Arduino_LPS22HB.h>
 
 const char* LocalName = "Bonsai Sense";
-const int ActiveMilliseconds = 1000;
-const int SleepingMilliseconds = 5000;
+const int PollingMilliseconds = 500;
+const int SleepMilliseconds = 500;
+const int SleepLongMilliseconds = 5000;
+const int HealthCheckIntervalMilliseconds = 1000;
+const int HealthCheckFailCount = 3;
 
 BLEService _service("181A");
 BLEUnsignedLongCharacteristic _pressureCharacteristic("2A6D", BLERead | BLENotify);
@@ -17,10 +20,8 @@ uint16_t _humidity;
 
 void setup() {
   digitalWrite(LED_PWR, LOW);
-  
   Serial.begin(9600);
-  delay(3000);
-  
+
   while (!BLE.begin()) {
     Serial.println("Error starting BLE");
     delay(1000);
@@ -45,29 +46,69 @@ void setup() {
   BLE.addService(_service);
   BLE.setAdvertisedService(_service);
 
+  BLE.setEventHandler(BLEConnected, onConnected);
+  BLE.setEventHandler(BLEDisconnected, onDisconnected);
+
   Serial.println("Advertising...");
   BLE.advertise();
 }
 
-void loop() {
-  // wake up
-  auto started = millis();
-  digitalWrite(LED_PWR, HIGH);
+void onConnected(BLEDevice device) {
+  Serial.print(device.address());
+  Serial.println(": connected.");
+}
 
-  // read values while cold :)
+void onDisconnected(BLEDevice device) {
+  Serial.print(device.address());
+  Serial.println(": disconnected.");
+}
+
+void loop() {
+  int wokeUpAt = wakeUp();
+
+  BLEDevice central = BLE.central();
+  if (central && central.connected()) {
+    if (healthy(central)) {
+      loopConnected(central, wokeUpAt);
+      return;
+    }
+
+    central.disconnect();
+  }
+
+  while (millis() - wokeUpAt < PollingMilliseconds) {
+    BLE.poll();
+  }
+
+  sleepNormal();
+}
+
+bool healthy(BLEDevice central) {
+  int count = 0;
+  while (central.rssi() == 0 && ++count < HealthCheckFailCount) {
+    Serial.print(central.address());
+    Serial.println(": no connection, will try again.");
+    
+    delay(HealthCheckIntervalMilliseconds);
+  }
+
+  if (count > 0 && count < HealthCheckFailCount) {
+    Serial.print(central.address());
+    Serial.println(": connection restored.");
+  }
+
+  return count < HealthCheckFailCount;
+}
+
+void loopConnected(BLEDevice central, int wokeUpAt){
+  // read values
   auto temperature = (int16_t)(HTS.readTemperature() * 100);
   auto pressure = (uint32_t)(BARO.readPressure() * 10000);
   auto humidity = (uint16_t)(HTS.readHumidity() * 100);
 
-  // loop for messages
-  while (millis() - started < ActiveMilliseconds / 2) {
-    BLE.poll();
-  }
-
-  // drop stale connections
-  auto central = BLE.central();
-  if (central && central.connected() && central.rssi() == 0) {
-    central.disconnect();
+  // polling in connected mode
+  while (millis() - wokeUpAt < PollingMilliseconds / 2) {
+    central.poll();
   }
 
   // update values
@@ -86,12 +127,34 @@ void loop() {
     _humidity = humidity;
   }
 
-  // wait till the end of active time frame
-  while (millis() - started < ActiveMilliseconds) {
-    BLE.poll();
+  // finish polling
+  while (millis() - wokeUpAt < PollingMilliseconds) {
+    central.poll();
   }
 
-  // sleep
+  // if central has subscribed to all characteristics,
+  // switch to long sleep intervals
+  if (_temperatureCharacteristic.subscribed() &&
+    _pressureCharacteristic.subscribed() && 
+    _humidityCharacteristic.subscribed()) {
+    sleepLong();
+    return;
+  }
+
+  sleepNormal();
+}
+
+int wakeUp() {
+  digitalWrite(LED_PWR, HIGH);
+  return millis();
+}
+
+void sleepNormal() {
   digitalWrite(LED_PWR, LOW);
-  delay(SleepingMilliseconds);
+  delay(SleepMilliseconds);
+}
+
+void sleepLong() {
+  digitalWrite(LED_PWR, LOW);
+  delay(SleepLongMilliseconds);
 }
