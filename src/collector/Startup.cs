@@ -25,7 +25,8 @@ namespace BonsaiSense.Collector
 
             services.Configure<PollingOptions>(Configuration.GetSection("Polling"));
             services.AddSingleton<CurrentState>()
-                .AddHostedService<PollingService>();
+                .AddHostedService<PollingService>()
+                .AddHostedService<LightingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +46,26 @@ namespace BonsaiSense.Collector
                 endpoints.MapGet("/", context => context.Response
                     .WriteAsJsonAsync(context.RequestServices
                     .GetService<CurrentState>(), context.RequestAborted));
+                endpoints.MapPut("/", async context =>
+                {
+                    CurrentState desired = await context.Request
+                        .ReadFromJsonAsync<CurrentState>(context.RequestAborted);
+
+                    CurrentState current = context.RequestServices
+                        .GetRequiredService<CurrentState>();
+
+                    if (desired.LedsHue.HasValue ||
+                        desired.LedsSaturation.HasValue ||
+                        desired.LedsValue.HasValue)
+                    {
+                        current.UpdateLeds(desired.LedsHue,
+                            desired.LedsSaturation,
+                            desired.LedsValue);
+                    }
+
+                    await context.Response.WriteAsJsonAsync(current,
+                        context.RequestAborted);
+                });
             });
         }
     }

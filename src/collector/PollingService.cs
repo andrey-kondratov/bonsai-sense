@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace BonsaiSense.Collector
         private GattCharacteristic _pressureCharacteristic;
         private GattCharacteristic _temperatureCharacteristic;
         private GattCharacteristic _humidityCharacteristic;
+        private GattCharacteristic _ledsHueCharacteristic;
+        private GattCharacteristic _ledsSaturationCharacteristic;
+        private GattCharacteristic _ledsValueCharacteristic;
 
         public PollingService(ILogger<PollingService> logger,
             CurrentState currentState, IOptions<PollingOptions> options)
@@ -235,6 +239,40 @@ namespace BonsaiSense.Collector
                 {
                     _humidityCharacteristic.Value += OnHumidityValueAsync;
                 }
+
+                IGattService1 ledsService = await sender.GetServiceAsync(_options.LedsServiceUuid);
+                if (ledsService == null)
+                {
+                    _logger.LogWarning("Service UUID {Uuid} not found.", _options.LedsServiceUuid);
+                    return;
+                }
+
+                _ledsHueCharacteristic = await ledsService
+                    .GetCharacteristicAsync(_options.LedsHueCharacteristicUuid);
+                if (_ledsHueCharacteristic == null)
+                {
+                    _logger.LogWarning("No leds hue characteristic found within service {ServiceUuid}.",
+                        _options.LedsServiceUuid);
+                }
+
+                _ledsSaturationCharacteristic = await ledsService
+                    .GetCharacteristicAsync(_options.LedsSaturationCharacteristicUuid);
+                if (_ledsSaturationCharacteristic == null)
+                {
+                    _logger.LogWarning("No leds saturation characteristic found within service {ServiceUuid}.",
+                        _options.LedsServiceUuid);
+                }
+
+                _ledsValueCharacteristic = await ledsService
+                    .GetCharacteristicAsync(_options.LedsValueCharacteristicUuid);
+                if (_ledsValueCharacteristic == null)
+                {
+                    _logger.LogWarning("No leds value characteristic found within service {ServiceUuid}.",
+                        _options.LedsServiceUuid);
+                }
+
+                _currentState.LedsUpdated += OnCurrentStateLedsUpdated;
+
             }
             catch (Exception exception)
             {
@@ -279,6 +317,8 @@ namespace BonsaiSense.Collector
         {
             _logger.LogInformation("Stopping the polling service...");
 
+            _currentState.LedsUpdated -= OnCurrentStateLedsUpdated;
+
             if (_humidityCharacteristic != null)
             {
                 _humidityCharacteristic.Value -= OnHumidityValueAsync;
@@ -312,6 +352,35 @@ namespace BonsaiSense.Collector
             }
 
             _logger.LogInformation("Polling service stopped.");
+        }
+
+        private void OnCurrentStateLedsUpdated(object sender, LedsUpdatedEventArgs e)
+        {
+            var state = ((CurrentState)sender);
+
+            if (e.Hue.HasValue)
+            {
+                _ledsHueCharacteristic.WriteValueAsync(
+                    Value: BitConverter.GetBytes(e.Hue.Value),
+                    Options: ImmutableDictionary<string, Object>.Empty)
+                    .GetAwaiter().GetResult();
+            }
+
+            if (e.Saturation.HasValue)
+            {
+                _ledsSaturationCharacteristic.WriteValueAsync(
+                    Value: BitConverter.GetBytes(e.Saturation.Value),
+                    Options: ImmutableDictionary<string, Object>.Empty)
+                    .GetAwaiter().GetResult();
+            }
+
+            if (e.Value.HasValue)
+            {
+                _ledsValueCharacteristic.WriteValueAsync(
+                    Value: BitConverter.GetBytes(e.Value.Value),
+                    Options: ImmutableDictionary<string, Object>.Empty)
+                    .GetAwaiter().GetResult();
+            }
         }
     }
 }
