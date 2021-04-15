@@ -19,9 +19,11 @@ BLEService _service("181A");
 BLEUnsignedLongCharacteristic _pressureCharacteristic("2A6D", BLERead | BLENotify);
 BLEIntCharacteristic _temperatureCharacteristic("2A6E", BLERead | BLENotify);
 BLEUnsignedIntCharacteristic _humidityCharacteristic("2A6F", BLERead | BLENotify);
+BLEIntCharacteristic _externalTemperatureCharacteristic("2A1F", BLERead | BLENotify);
 uint32_t _pressure;
 int16_t _temperature;
 uint16_t _humidity;
+int16_t _externalTemperature;
 
 BLEService _ledsService("BC1DF15A-C3CF-41BB-AF3F-CE7A15949B79");
 BLEUnsignedIntCharacteristic _ledsHueCharacteristic("F76048A9-6446-49D7-A68D-3A0079D4EADC", BLERead | BLEWrite);
@@ -54,11 +56,14 @@ void setup() {
     while (1);
   }
 
+  initExternalTemperature();
+
   Serial.println("Configuring BLE...");
   BLE.setLocalName(LocalName);
   _service.addCharacteristic(_pressureCharacteristic);
   _service.addCharacteristic(_temperatureCharacteristic);
   _service.addCharacteristic(_humidityCharacteristic);
+  _service.addCharacteristic(_externalTemperatureCharacteristic);
 
   BLE.addService(_service);
   BLE.setAdvertisedService(_service);
@@ -136,6 +141,7 @@ void loopConnected(BLEDevice central, int wokeUpAt){
   auto temperature = (int16_t)(HTS.readTemperature() * 100);
   auto pressure = (uint32_t)(BARO.readPressure() * 10000);
   auto humidity = (uint16_t)(HTS.readHumidity() * 100);
+  uint32_t externalTemperature = readExternalTemperature();
 
   // polling in connected mode
   while (millis() - wokeUpAt < PollingMilliseconds / 2) {
@@ -145,17 +151,18 @@ void loopConnected(BLEDevice central, int wokeUpAt){
   // update values
   if (temperature != _temperature) {
     _temperatureCharacteristic.writeValue(_temperature = temperature);
-    _temperature = temperature;
   }
   
   if (pressure != _pressure) {
     _pressureCharacteristic.writeValue(_pressure = pressure);
-    _pressure = pressure;
   }
   
   if (humidity != _humidity) {
     _humidityCharacteristic.writeValue(_humidity = humidity);
-    _humidity = humidity;
+  }
+
+  if (externalTemperature != _externalTemperature) {
+    _externalTemperatureCharacteristic.writeValue(_externalTemperature = externalTemperature);
   }
 
   if (_ledsHueCharacteristic.written() || 
@@ -175,7 +182,8 @@ void loopConnected(BLEDevice central, int wokeUpAt){
   // switch to long sleep intervals
   if (_temperatureCharacteristic.subscribed() &&
     _pressureCharacteristic.subscribed() && 
-    _humidityCharacteristic.subscribed()) {
+    _humidityCharacteristic.subscribed() && 
+    _externalTemperatureCharacteristic.subscribed()) {
     sleepLong();
     return;
   }
@@ -219,4 +227,14 @@ void updateLeds(uint16_t hue, uint8_t saturation, uint8_t value) {
   _ledsHue = hue;
   _ledsSaturation = saturation;
   _ledsValue = value;
+}
+
+void initExternalTemperature() {
+  analogReadResolution(12);
+}
+
+int16_t readExternalTemperature() {
+  int sensorValue = analogRead(A0);
+  int voltage = map(sensorValue, 0, 4096, 0, 3300);
+  return voltage - 500;
 }
