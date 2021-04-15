@@ -8,7 +8,7 @@ namespace BonsaiSense.Collector
     internal sealed class LightingService : BackgroundService
     {
         private readonly CurrentState _currentState;
-        private static readonly (ushort h, byte s, byte v) DayValues = (6500, 96, 112);
+        private static readonly (ushort h, byte s, byte v) DayValues = (9000, 96, 212);
         private static readonly (ushort h, byte s, byte v) NightValues = (0, 0, 0);
 
         public LightingService(CurrentState currentState)
