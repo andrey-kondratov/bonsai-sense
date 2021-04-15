@@ -3,8 +3,9 @@ namespace BonsaiSense.Collector
     public class PollingOptions
     {
         public string ServiceUuid { get; set; } = "0000181a-0000-1000-8000-00805f9b34fb";
-        public string DeviceAddress { get; set; } = "B5:01:34:D0:95:C4";
+        public string DeviceAddress { get; set; } = "B5:01:34:D0:95:24";
         public string DeviceName { get; set; } = "Bonsai Sense";
+        public string ExternalTemperatureCharacteristicUuid { get; set; } = "00002a1f-0000-1000-8000-00805f9b34fb";
         public string PressureCharacteristicUuid { get; set; } = "00002a6d-0000-1000-8000-00805f9b34fb";
         public string TemperatureCharacteristicUuid { get; set; } = "00002a6e-0000-1000-8000-00805f9b34fb";
         public string HumidityCharacteristicUuid { get; set; } = "00002a6f-0000-1000-8000-00805f9b34fb";

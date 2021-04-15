@@ -18,6 +18,7 @@ namespace BonsaiSense.Collector
         private readonly PollingOptions _options;
         private Adapter _adapter;
         private Device _device;
+        private GattCharacteristic _externalTemperatureCharacteristic;
         private GattCharacteristic _pressureCharacteristic;
         private GattCharacteristic _temperatureCharacteristic;
         private GattCharacteristic _humidityCharacteristic;
@@ -204,6 +205,18 @@ namespace BonsaiSense.Collector
                     return;
                 }
 
+                _externalTemperatureCharacteristic = await service
+                    .GetCharacteristicAsync(_options.ExternalTemperatureCharacteristicUuid);
+                if (_externalTemperatureCharacteristic == null)
+                {
+                    _logger.LogWarning("No external temperature characteristic found with service {ServiceUuid}.",
+                        _options.ServiceUuid);
+                }
+                else
+                {
+                    _externalTemperatureCharacteristic.Value += OnExternalTemperatureValueAsync;
+                }
+
                 _pressureCharacteristic = await service
                     .GetCharacteristicAsync(_options.PressureCharacteristicUuid);
                 if (_pressureCharacteristic == null)
@@ -278,6 +291,17 @@ namespace BonsaiSense.Collector
             {
                 _logger.LogError(exception, "Error handling ServicesResolved event.");
             }
+        }
+
+        private Task OnExternalTemperatureValueAsync(GattCharacteristic sender, GattCharacteristicValueEventArgs eventArgs)
+        {
+            double value = Math.Round(BitConverter.ToInt16(eventArgs.Value) * .1, 4);
+            _logger.LogDebug("Received raw external temperature value: {@ValueBytes}, parsed: {Value} °C.",
+                eventArgs.Value, value);
+
+            _currentState.ExternalTemperature = value;
+
+            return Task.CompletedTask;
         }
 
         private Task OnPressureValueAsync(GattCharacteristic sender, GattCharacteristicValueEventArgs eventArgs)
