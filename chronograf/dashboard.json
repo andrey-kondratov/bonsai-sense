@@ -1,1425 +1,692 @@
 {
-    "meta": {
-     "version": "1",
-     "type": "dashboard",
-     "name": "Бонсай Кармона-Template",
-     "description": "template created from dashboard: Бонсай Кармона"
-    },
-    "content": {
-     "data": {
-      "type": "dashboard",
-      "attributes": {
-       "name": "Бонсай Кармона",
-       "description": ""
-      },
-      "relationships": {
-       "label": {
-        "data": [
-         {
-          "type": "label",
-          "id": "074ace0e15da1000"
-         }
-        ]
-       },
-       "cell": {
-        "data": [
-         {
-          "type": "cell",
-          "id": "074fdc86bbfab000"
-         },
-         {
-          "type": "cell",
-          "id": "074fdea525b39000"
-         },
-         {
-          "type": "cell",
-          "id": "074fe1f8440e6000"
-         },
-         {
-          "type": "cell",
-          "id": "0750cf8ef36a8000"
-         },
-         {
-          "type": "cell",
-          "id": "07608c8906dbc000"
-         },
-         {
-          "type": "cell",
-          "id": "07608c97c18a3000"
-         },
-         {
-          "type": "cell",
-          "id": "07608e2f8073d000"
-         },
-         {
-          "type": "cell",
-          "id": "07608f4fe88f6000"
-         },
-         {
-          "type": "cell",
-          "id": "07608f96149bc000"
-         },
-         {
-          "type": "cell",
-          "id": "07608fba470a3000"
-         },
-         {
-          "type": "cell",
-          "id": "0761b3b94e8f7000"
-         },
-         {
-          "type": "cell",
-          "id": "0761b3bcd67b7000"
-         }
-        ]
-       },
-       "variable": {
-        "data": []
-       }
-      }
-     },
-     "included": [
+ "meta": {
+  "version": "1",
+  "type": "dashboard",
+  "name": "Carmona Bonsai-Template",
+  "description": "template created from dashboard: Carmona Bonsai"
+ },
+ "content": {
+  "data": {
+   "type": "dashboard",
+   "attributes": {
+    "name": "Carmona Bonsai",
+    "description": "Bonsai tree monitor"
+   },
+   "relationships": {
+    "label": {
+     "data": [
       {
        "type": "label",
-       "id": "074ace0e15da1000",
-       "attributes": {
-        "name": "home",
-        "properties": {
-         "color": "#326BBA",
-         "description": ""
-        }
-       }
-      },
-      {
-       "id": "074fdc86bbfab000",
-       "type": "cell",
-       "attributes": {
-        "x": 0,
-        "y": 6,
-        "w": 7,
-        "h": 2
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "074fdc86bbfab000"
-         }
-        }
-       }
-      },
-      {
-       "id": "074fdea525b39000",
-       "type": "cell",
-       "attributes": {
-        "x": 7,
-        "y": 3,
-        "w": 5,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "074fdea525b39000"
-         }
-        }
-       }
-      },
-      {
-       "id": "074fe1f8440e6000",
-       "type": "cell",
-       "attributes": {
-        "x": 0,
-        "y": 3,
-        "w": 7,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "074fe1f8440e6000"
-         }
-        }
-       }
-      },
-      {
-       "id": "0750cf8ef36a8000",
-       "type": "cell",
-       "attributes": {
-        "x": 7,
-        "y": 6,
-        "w": 5,
-        "h": 2
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "0750cf8ef36a8000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608c8906dbc000",
-       "type": "cell",
-       "attributes": {
-        "x": 8,
-        "y": 8,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608c8906dbc000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608c97c18a3000",
-       "type": "cell",
-       "attributes": {
-        "x": 0,
-        "y": 8,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608c97c18a3000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608e2f8073d000",
-       "type": "cell",
-       "attributes": {
-        "x": 4,
-        "y": 8,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608e2f8073d000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608f4fe88f6000",
-       "type": "cell",
-       "attributes": {
-        "x": 0,
-        "y": 11,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608f4fe88f6000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608f96149bc000",
-       "type": "cell",
-       "attributes": {
-        "x": 4,
-        "y": 11,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608f96149bc000"
-         }
-        }
-       }
-      },
-      {
-       "id": "07608fba470a3000",
-       "type": "cell",
-       "attributes": {
-        "x": 8,
-        "y": 11,
-        "w": 4,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "07608fba470a3000"
-         }
-        }
-       }
-      },
-      {
-       "id": "0761b3b94e8f7000",
-       "type": "cell",
-       "attributes": {
-        "x": 0,
-        "y": 0,
-        "w": 7,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "0761b3b94e8f7000"
-         }
-        }
-       }
-      },
-      {
-       "id": "0761b3bcd67b7000",
-       "type": "cell",
-       "attributes": {
-        "x": 7,
-        "y": 0,
-        "w": 5,
-        "h": 3
-       },
-       "relationships": {
-        "view": {
-         "data": {
-          "type": "view",
-          "id": "0761b3bcd67b7000"
-         }
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "074fdc86bbfab000",
-       "attributes": {
-        "name": "Атмосферное давление у микроконтроллера",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"pressure\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "Па",
-           "base": "10",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "line",
-         "colors": [
-          {
-           "id": "6550957e-ee79-4b81-b2fe-ddec63c805a1",
-           "type": "scale",
-           "hex": "#31C0F6",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "22da07ec-4e44-490b-ab27-25a263b12163",
-           "type": "scale",
-           "hex": "#A500A5",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "5f9b3964-2888-43d1-b5b1-b61be5da459e",
-           "type": "scale",
-           "hex": "#FF7E27",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": false,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "074fdea525b39000",
-       "attributes": {
-        "name": "Влажность воздуха у микроконтроллера",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "gauge",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"humidity\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "%",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "0",
-           "type": "min",
-           "hex": "#FFD255",
-           "name": "thunder",
-           "value": 25
-          },
-          {
-           "id": "a4de3d8c-e65c-4326-8bb2-12cafb892696",
-           "type": "threshold",
-           "hex": "#7CE490",
-           "name": "honeydew",
-           "value": 35
-          },
-          {
-           "id": "158a91ed-1eb6-4273-8987-186f99392ca1",
-           "type": "threshold",
-           "hex": "#4ED8A0",
-           "name": "rainforest",
-           "value": 45
-          },
-          {
-           "id": "bfa769a1-3edf-4db1-afe0-4c958d4742dc",
-           "type": "threshold",
-           "hex": "#32B08C",
-           "name": "viridian",
-           "value": 55
-          },
-          {
-           "id": "31afa39b-f719-46ba-81b0-fdc6fd69bd1d",
-           "type": "threshold",
-           "hex": "#4591ED",
-           "name": "ocean",
-           "value": 65
-          },
-          {
-           "id": "1",
-           "type": "max",
-           "hex": "#4591ED",
-           "name": "ocean",
-           "value": 75
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 0
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "074fe1f8440e6000",
-       "attributes": {
-        "name": "Влажность воздуха у микроконтроллера",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"humidity\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "%",
-           "base": "10",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "line",
-         "colors": [
-          {
-           "id": "d6c4fff3-0a45-4409-9c7d-5770145523d4",
-           "type": "scale",
-           "hex": "#31C0F6",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "1cb791d0-5ce9-4522-9a1a-88a3c6b182bd",
-           "type": "scale",
-           "hex": "#A500A5",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "1c11107b-0d37-493a-b045-13f00fb66299",
-           "type": "scale",
-           "hex": "#FF7E27",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": true,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "0750cf8ef36a8000",
-       "attributes": {
-        "name": "Атмосферное давление у микроконтроллера",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "single-stat",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"pressure\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "Па",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "base",
-           "type": "text",
-           "hex": "#00C9FF",
-           "name": "laser",
-           "value": 0
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 0
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608c8906dbc000",
-       "attributes": {
-        "name": "LED освещение: яркость",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "gauge",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsValue\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "0",
-           "type": "min",
-           "hex": "#292933",
-           "name": "castle",
-           "value": 0
-          },
-          {
-           "id": "1",
-           "type": "max",
-           "hex": "#ffffff",
-           "name": "white",
-           "value": 255
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 0
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608c97c18a3000",
-       "attributes": {
-        "name": "LED освещение: оттенок",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "gauge",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsHue\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "0",
-           "type": "min",
-           "hex": "#DC4E58",
-           "name": "fire",
-           "value": 0
-          },
-          {
-           "id": "488533cb-9e63-4e3f-a7c8-bd5cacb860b1",
-           "type": "threshold",
-           "hex": "#FFD255",
-           "name": "thunder",
-           "value": 5461
-          },
-          {
-           "id": "997dceda-6d41-4e94-9fe3-2d862175c7be",
-           "type": "threshold",
-           "hex": "#7CE490",
-           "name": "honeydew",
-           "value": 16384
-          },
-          {
-           "id": "96c9900c-d9b7-4a4e-aa6b-cfbf4f997043",
-           "type": "threshold",
-           "hex": "#00C9FF",
-           "name": "laser",
-           "value": 27301
-          },
-          {
-           "id": "8b166ec2-c31a-4754-9927-95d3c527a1fb",
-           "type": "threshold",
-           "hex": "#4591ED",
-           "name": "ocean",
-           "value": 38229
-          },
-          {
-           "id": "e44e07ac-860e-443f-ac51-2425418c2984",
-           "type": "threshold",
-           "hex": "#7A65F2",
-           "name": "star",
-           "value": 49152
-          },
-          {
-           "id": "512bdb9c-ec75-48f9-95a5-513b4f24ad20",
-           "type": "threshold",
-           "hex": "#BF3D5E",
-           "name": "ruby",
-           "value": 60075
-          },
-          {
-           "id": "1",
-           "type": "max",
-           "hex": "#BF3D5E",
-           "name": "ruby",
-           "value": 65536
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 0
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608e2f8073d000",
-       "attributes": {
-        "name": "LED освещение: насыщенность",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "gauge",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsSaturation\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "0",
-           "type": "min",
-           "hex": "#ffffff",
-           "name": "white",
-           "value": 0
-          },
-          {
-           "id": "1",
-           "type": "max",
-           "hex": "#FFB94A",
-           "name": "pineapple",
-           "value": 255
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 0
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608f4fe88f6000",
-       "attributes": {
-        "name": "LED освещение: оттенок",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsHue\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "0",
-            "65536"
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "step",
-         "colors": [
-          {
-           "id": "77a08736-f002-4676-832f-5a23c47a6868",
-           "type": "scale",
-           "hex": "#FDC44F",
-           "name": "Cthulhu",
-           "value": 0
-          },
-          {
-           "id": "38e5d1db-42c3-430a-b232-d13d3ec0157d",
-           "type": "scale",
-           "hex": "#007C76",
-           "name": "Cthulhu",
-           "value": 0
-          },
-          {
-           "id": "992bb106-c550-4398-b30e-31291ee84d3e",
-           "type": "scale",
-           "hex": "#8983FF",
-           "name": "Cthulhu",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": false,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608f96149bc000",
-       "attributes": {
-        "name": "LED освещение: насыщенность",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsSaturation\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "0",
-            "255"
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "line",
-         "colors": [
-          {
-           "id": "12c498cc-99be-487b-84dd-ddb27eccbad4",
-           "type": "scale",
-           "hex": "#31C0F6",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "d994233c-dc6c-43a3-ba80-8f6b26f086b3",
-           "type": "scale",
-           "hex": "#A500A5",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          },
-          {
-           "id": "69c87a87-f9f3-44b3-9947-f37d00ec4370",
-           "type": "scale",
-           "hex": "#FF7E27",
-           "name": "Nineteen Eighty Four",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": false,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "07608fba470a3000",
-       "attributes": {
-        "name": "LED освещение: яркость",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"ledsValue\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "0",
-            "255"
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "line",
-         "colors": [
-          {
-           "id": "84394539-7e33-4a89-b4a2-ce3358dcd97b",
-           "type": "scale",
-           "hex": "#F6F6F8",
-           "name": "T-Max 400 Film",
-           "value": 0
-          },
-          {
-           "id": "f653fe17-f5b9-494b-9e6c-f4821b426815",
-           "type": "scale",
-           "hex": "#A4A8B6",
-           "name": "T-Max 400 Film",
-           "value": 0
-          },
-          {
-           "id": "f6a82c19-d12a-4afc-acce-2320fe986a46",
-           "type": "scale",
-           "hex": "#545667",
-           "name": "T-Max 400 Film",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": false,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "0761b3b94e8f7000",
-       "attributes": {
-        "name": "Температура воздуха",
-        "properties": {
-         "shape": "chronograf-v2",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"externalTemperature\" or r[\"_field\"] == \"temperature\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "axes": {
-          "x": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "",
-           "base": "10",
-           "scale": "linear"
-          },
-          "y": {
-           "bounds": [
-            "",
-            ""
-           ],
-           "label": "",
-           "prefix": "",
-           "suffix": "°C",
-           "base": "10",
-           "scale": "linear"
-          }
-         },
-         "type": "xy",
-         "legend": {},
-         "geom": "line",
-         "colors": [
-          {
-           "id": "f4a467a2-dcd7-4932-9cfd-bd639a07b64d",
-           "type": "scale",
-           "hex": "#FD7A5D",
-           "name": "Delorean",
-           "value": 0
-          },
-          {
-           "id": "5ae15587-d374-4701-ac13-1a9345df2777",
-           "type": "scale",
-           "hex": "#5F1CF2",
-           "name": "Delorean",
-           "value": 0
-          },
-          {
-           "id": "26f7edd0-74c7-4c1f-bd7f-5598351d8211",
-           "type": "scale",
-           "hex": "#4CE09A",
-           "name": "Delorean",
-           "value": 0
-          }
-         ],
-         "note": "",
-         "showNoteWhenEmpty": false,
-         "xColumn": "_time",
-         "generateXAxisTicks": [],
-         "xTotalTicks": 0,
-         "xTickStart": 0,
-         "xTickStep": 0,
-         "yColumn": "_value",
-         "generateYAxisTicks": [],
-         "yTotalTicks": 0,
-         "yTickStart": 0,
-         "yTickStep": 0,
-         "shadeBelow": false,
-         "position": "overlaid",
-         "timeFormat": "HH:mm",
-         "hoverDimension": "auto",
-         "legendColorizeRows": true,
-         "legendOpacity": 1,
-         "legendOrientationThreshold": 100000000
-        }
-       }
-      },
-      {
-       "type": "view",
-       "id": "0761b3bcd67b7000",
-       "attributes": {
-        "name": "Температура воздуха",
-        "properties": {
-         "shape": "chronograf-v2",
-         "type": "gauge",
-         "queries": [
-          {
-           "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"externalTemperature\")\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\n  |> yield(name: \"last\")",
-           "editMode": "advanced",
-           "name": "",
-           "builderConfig": {
-            "buckets": [],
-            "tags": [
-             {
-              "key": "_measurement",
-              "values": [],
-              "aggregateFunctionType": "filter"
-             }
-            ],
-            "functions": [
-             {
-              "name": "mean"
-             }
-            ],
-            "aggregateWindow": {
-             "period": "auto",
-             "fillValues": false
-            }
-           }
-          }
-         ],
-         "prefix": "",
-         "tickPrefix": "",
-         "suffix": "°C",
-         "tickSuffix": "",
-         "colors": [
-          {
-           "id": "0",
-           "type": "min",
-           "hex": "#383846",
-           "name": "pepper",
-           "value": 0
-          },
-          {
-           "id": "09bac352-7288-49ce-b55c-f33543d688b8",
-           "type": "threshold",
-           "hex": "#4591ED",
-           "name": "ocean",
-           "value": 5
-          },
-          {
-           "id": "420e5f1d-5cd9-4de2-80c5-c8ee3b52173e",
-           "type": "threshold",
-           "hex": "#32B08C",
-           "name": "viridian",
-           "value": 10
-          },
-          {
-           "id": "6ce769c8-1cb0-4608-8865-89843906e54b",
-           "type": "threshold",
-           "hex": "#4ED8A0",
-           "name": "rainforest",
-           "value": 16
-          },
-          {
-           "id": "ac871d1a-3484-4e12-bd53-78b20db7a481",
-           "type": "threshold",
-           "hex": "#7CE490",
-           "name": "honeydew",
-           "value": 26
-          },
-          {
-           "id": "3c8cc559-4c81-475d-ba66-c29ba8861d40",
-           "type": "threshold",
-           "hex": "#FFD255",
-           "name": "thunder",
-           "value": 35
-          },
-          {
-           "id": "21662901-8a45-4375-a887-c6121aebc761",
-           "type": "threshold",
-           "hex": "#F95F53",
-           "name": "curacao",
-           "value": 45
-          },
-          {
-           "id": "1",
-           "type": "max",
-           "hex": "#BF3D5E",
-           "name": "ruby",
-           "value": 50
-          }
-         ],
-         "decimalPlaces": {
-          "isEnforced": true,
-          "digits": 1
-         },
-         "note": "",
-         "showNoteWhenEmpty": false
-        }
-       }
+       "id": "074ace0e15da1000"
       }
      ]
     },
-    "labels": []
+    "cell": {
+     "data": [
+      {
+       "type": "cell",
+       "id": "074fdc86bbfab000"
+      },
+      {
+       "type": "cell",
+       "id": "074fe1f8440e6000"
+      },
+      {
+       "type": "cell",
+       "id": "0761b3b94e8f7000"
+      },
+      {
+       "type": "cell",
+       "id": "0765c8b0608ab000"
+      }
+     ]
+    },
+    "variable": {
+     "data": []
+    }
    }
+  },
+  "included": [
+   {
+    "type": "label",
+    "id": "074ace0e15da1000",
+    "attributes": {
+     "name": "home",
+     "properties": {
+      "color": "#326BBA",
+      "description": ""
+     }
+    }
+   },
+   {
+    "id": "074fdc86bbfab000",
+    "type": "cell",
+    "attributes": {
+     "x": 0,
+     "y": 9,
+     "w": 12,
+     "h": 3
+    },
+    "relationships": {
+     "view": {
+      "data": {
+       "type": "view",
+       "id": "074fdc86bbfab000"
+      }
+     }
+    }
+   },
+   {
+    "id": "074fe1f8440e6000",
+    "type": "cell",
+    "attributes": {
+     "x": 0,
+     "y": 0,
+     "w": 12,
+     "h": 3
+    },
+    "relationships": {
+     "view": {
+      "data": {
+       "type": "view",
+       "id": "074fe1f8440e6000"
+      }
+     }
+    }
+   },
+   {
+    "id": "0761b3b94e8f7000",
+    "type": "cell",
+    "attributes": {
+     "x": 0,
+     "y": 3,
+     "w": 12,
+     "h": 3
+    },
+    "relationships": {
+     "view": {
+      "data": {
+       "type": "view",
+       "id": "0761b3b94e8f7000"
+      }
+     }
+    }
+   },
+   {
+    "id": "0765c8b0608ab000",
+    "type": "cell",
+    "attributes": {
+     "x": 0,
+     "y": 6,
+     "w": 12,
+     "h": 3
+    },
+    "relationships": {
+     "view": {
+      "data": {
+       "type": "view",
+       "id": "0765c8b0608ab000"
+      }
+     }
+    }
+   },
+   {
+    "type": "view",
+    "id": "074fdc86bbfab000",
+    "attributes": {
+     "name": "Atmospheric pressure",
+     "properties": {
+      "shape": "chronograf-v2",
+      "queries": [
+       {
+        "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"pressure\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+        "editMode": "advanced",
+        "name": "",
+        "builderConfig": {
+         "buckets": [],
+         "tags": [
+          {
+           "key": "_measurement",
+           "values": [],
+           "aggregateFunctionType": "filter"
+          }
+         ],
+         "functions": [
+          {
+           "name": "mean"
+          }
+         ],
+         "aggregateWindow": {
+          "period": "auto",
+          "fillValues": false
+         }
+        }
+       }
+      ],
+      "axes": {
+       "x": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "",
+        "base": "10",
+        "scale": "linear"
+       },
+       "y": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "Pa",
+        "base": "10",
+        "scale": "linear"
+       }
+      },
+      "type": "line-plus-single-stat",
+      "staticLegend": {},
+      "colors": [
+       {
+        "id": "49a4181c-b332-4db1-b4b3-33e9b4128cfd",
+        "type": "scale",
+        "hex": "#8F8AF4",
+        "name": "Do Androids Dream of Electric Sheep?",
+        "value": 0
+       },
+       {
+        "id": "a6e7ac0e-9b08-42e2-bb3d-56d0bce0c3fe",
+        "type": "scale",
+        "hex": "#A51414",
+        "name": "Do Androids Dream of Electric Sheep?",
+        "value": 0
+       },
+       {
+        "id": "a2f7e65a-fc11-47fc-8230-50d6fd2ac8d8",
+        "type": "scale",
+        "hex": "#F4CF31",
+        "name": "Do Androids Dream of Electric Sheep?",
+        "value": 0
+       },
+       {
+        "id": "base",
+        "type": "text",
+        "hex": "#7A65F2",
+        "name": "star",
+        "value": 0
+       }
+      ],
+      "prefix": "",
+      "suffix": "Pa",
+      "decimalPlaces": {
+       "isEnforced": true,
+       "digits": 0
+      },
+      "note": "",
+      "showNoteWhenEmpty": false,
+      "xColumn": "_time",
+      "generateXAxisTicks": [],
+      "xTotalTicks": 0,
+      "xTickStart": 0,
+      "xTickStep": 0,
+      "yColumn": "_value",
+      "generateYAxisTicks": [],
+      "yTotalTicks": 0,
+      "yTickStart": 0,
+      "yTickStep": 0,
+      "shadeBelow": true,
+      "position": "overlaid",
+      "timeFormat": "HH:mm",
+      "hoverDimension": "auto",
+      "legendColorizeRows": true,
+      "legendOpacity": 1,
+      "legendOrientationThreshold": 100000000
+     }
+    }
+   },
+   {
+    "type": "view",
+    "id": "074fe1f8440e6000",
+    "attributes": {
+     "name": "Humidity",
+     "properties": {
+      "shape": "chronograf-v2",
+      "queries": [
+       {
+        "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"humidity\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+        "editMode": "advanced",
+        "name": "",
+        "builderConfig": {
+         "buckets": [],
+         "tags": [
+          {
+           "key": "_measurement",
+           "values": [],
+           "aggregateFunctionType": "filter"
+          }
+         ],
+         "functions": [
+          {
+           "name": "mean"
+          }
+         ],
+         "aggregateWindow": {
+          "period": "auto",
+          "fillValues": false
+         }
+        }
+       }
+      ],
+      "axes": {
+       "x": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "",
+        "base": "10",
+        "scale": "linear"
+       },
+       "y": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "%",
+        "base": "",
+        "scale": "linear"
+       }
+      },
+      "type": "line-plus-single-stat",
+      "staticLegend": {},
+      "colors": [
+       {
+        "id": "base",
+        "type": "text",
+        "hex": "#FFD255",
+        "name": "thunder",
+        "value": 0
+       },
+       {
+        "id": "b34d6d22-72a6-48a3-897d-1d29a06b4557",
+        "type": "text",
+        "hex": "#7CE490",
+        "name": "honeydew",
+        "value": 35
+       },
+       {
+        "id": "1023da78-6662-4f39-8820-93c5be87e662",
+        "type": "text",
+        "hex": "#4ED8A0",
+        "name": "rainforest",
+        "value": 45
+       },
+       {
+        "id": "67a3f7fa-bb15-4ac5-b201-192bc195ef7b",
+        "type": "text",
+        "hex": "#32B08C",
+        "name": "viridian",
+        "value": 55
+       },
+       {
+        "id": "ce53fb99-adbe-4dc4-8cd8-063f607243f0",
+        "type": "text",
+        "hex": "#4591ED",
+        "name": "ocean",
+        "value": 65
+       },
+       {
+        "id": "b17b997d-5f0c-4a9b-a949-f9493e6f1dc4",
+        "type": "scale",
+        "hex": "#00A3FF",
+        "name": "Solid Blue",
+        "value": 0
+       },
+       {
+        "id": "9189d757-98a1-43fc-b646-9362ee27b155",
+        "type": "scale",
+        "hex": "#00A3FF",
+        "name": "Solid Blue",
+        "value": 0
+       },
+       {
+        "id": "d6d3d435-c97a-4c00-b783-6024acb4fb61",
+        "type": "scale",
+        "hex": "#00A3FF",
+        "name": "Solid Blue",
+        "value": 0
+       }
+      ],
+      "prefix": "",
+      "suffix": "%",
+      "decimalPlaces": {
+       "isEnforced": true,
+       "digits": 1
+      },
+      "note": "",
+      "showNoteWhenEmpty": false,
+      "xColumn": "_time",
+      "generateXAxisTicks": [],
+      "xTotalTicks": 0,
+      "xTickStart": 0,
+      "xTickStep": 0,
+      "yColumn": "_value",
+      "generateYAxisTicks": [],
+      "yTotalTicks": 0,
+      "yTickStart": 0,
+      "yTickStep": 0,
+      "shadeBelow": true,
+      "position": "overlaid",
+      "timeFormat": "HH:mm",
+      "hoverDimension": "auto",
+      "legendColorizeRows": true,
+      "legendOpacity": 1,
+      "legendOrientationThreshold": 100000000
+     }
+    }
+   },
+   {
+    "type": "view",
+    "id": "0761b3b94e8f7000",
+    "attributes": {
+     "name": "Air temperature",
+     "properties": {
+      "shape": "chronograf-v2",
+      "queries": [
+       {
+        "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"externalTemperature\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+        "editMode": "advanced",
+        "name": "",
+        "builderConfig": {
+         "buckets": [],
+         "tags": [
+          {
+           "key": "_measurement",
+           "values": [],
+           "aggregateFunctionType": "filter"
+          }
+         ],
+         "functions": [
+          {
+           "name": "mean"
+          }
+         ],
+         "aggregateWindow": {
+          "period": "auto",
+          "fillValues": false
+         }
+        }
+       }
+      ],
+      "axes": {
+       "x": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "",
+        "base": "10",
+        "scale": "linear"
+       },
+       "y": {
+        "bounds": null,
+        "label": "",
+        "prefix": "",
+        "suffix": "°C",
+        "base": "",
+        "scale": "linear"
+       }
+      },
+      "type": "line-plus-single-stat",
+      "staticLegend": {},
+      "colors": [
+       {
+        "id": "base",
+        "type": "text",
+        "hex": "#00C9FF",
+        "name": "laser",
+        "value": 0
+       },
+       {
+        "id": "7faff0a9-5237-4ea6-8724-1b92c373ca8f",
+        "type": "text",
+        "hex": "#7CE490",
+        "name": "honeydew",
+        "value": 18
+       },
+       {
+        "id": "da5b3e1c-3a1c-46b5-bcd6-15d00e0184b9",
+        "type": "text",
+        "hex": "#FFD255",
+        "name": "thunder",
+        "value": 25
+       },
+       {
+        "id": "2ecf2861-7b2c-4855-b844-dea1b6fba0f9",
+        "type": "text",
+        "hex": "#F48D38",
+        "name": "tiger",
+        "value": 30
+       },
+       {
+        "id": "5879103c-82ad-459d-a0c8-eefbdbafebce",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       },
+       {
+        "id": "e39e6468-4347-4dc3-ba0d-b8ffa888ee1b",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       },
+       {
+        "id": "00ce3adb-6dad-4d84-ae84-ce2fa1b322cf",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       }
+      ],
+      "prefix": "",
+      "suffix": "°C",
+      "decimalPlaces": {
+       "isEnforced": true,
+       "digits": 1
+      },
+      "note": "",
+      "showNoteWhenEmpty": false,
+      "xColumn": "_time",
+      "generateXAxisTicks": [],
+      "xTotalTicks": 0,
+      "xTickStart": 0,
+      "xTickStep": 0,
+      "yColumn": "_value",
+      "generateYAxisTicks": [],
+      "yTotalTicks": 0,
+      "yTickStart": 0,
+      "yTickStep": 1,
+      "shadeBelow": true,
+      "position": "overlaid",
+      "timeFormat": "HH:mm",
+      "hoverDimension": "auto",
+      "legendColorizeRows": true,
+      "legendOpacity": 1,
+      "legendOrientationThreshold": 100000000
+     }
+    }
+   },
+   {
+    "type": "view",
+    "id": "0765c8b0608ab000",
+    "attributes": {
+     "name": "Chip temperature",
+     "properties": {
+      "shape": "chronograf-v2",
+      "queries": [
+       {
+        "text": "from(bucket: \"andrew.kondratov's Bucket\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"bonsai\")\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"mean\")",
+        "editMode": "advanced",
+        "name": "",
+        "builderConfig": {
+         "buckets": [],
+         "tags": [
+          {
+           "key": "_measurement",
+           "values": [],
+           "aggregateFunctionType": "filter"
+          }
+         ],
+         "functions": [
+          {
+           "name": "mean"
+          }
+         ],
+         "aggregateWindow": {
+          "period": "auto",
+          "fillValues": false
+         }
+        }
+       }
+      ],
+      "axes": {
+       "x": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "",
+        "base": "10",
+        "scale": "linear"
+       },
+       "y": {
+        "bounds": [
+         "",
+         ""
+        ],
+        "label": "",
+        "prefix": "",
+        "suffix": "°C",
+        "base": "",
+        "scale": "linear"
+       }
+      },
+      "type": "line-plus-single-stat",
+      "staticLegend": {},
+      "colors": [
+       {
+        "id": "base",
+        "type": "text",
+        "hex": "#00C9FF",
+        "name": "laser",
+        "value": 0
+       },
+       {
+        "id": "b0c828be-fd64-4063-9cf1-11a1b7d10d6e",
+        "type": "text",
+        "hex": "#4ED8A0",
+        "name": "rainforest",
+        "value": 18
+       },
+       {
+        "id": "02f13104-8141-4e3c-9bad-1182983a482f",
+        "type": "text",
+        "hex": "#7CE490",
+        "name": "honeydew",
+        "value": 25
+       },
+       {
+        "id": "99fd2212-946f-440d-a911-f65acafe6d2e",
+        "type": "text",
+        "hex": "#FFD255",
+        "name": "thunder",
+        "value": 30
+       },
+       {
+        "id": "107d88f6-f937-42a9-b947-fe8f3bc753dc",
+        "type": "text",
+        "hex": "#F48D38",
+        "name": "tiger",
+        "value": 35
+       },
+       {
+        "id": "22a9029c-1e9e-4196-8df4-d786ff9e0c97",
+        "type": "text",
+        "hex": "#F95F53",
+        "name": "curacao",
+        "value": 40
+       },
+       {
+        "id": "77172f20-41d9-41af-a5b5-8bb4b68649a6",
+        "type": "text",
+        "hex": "#DC4E58",
+        "name": "fire",
+        "value": 45
+       },
+       {
+        "id": "5879103c-82ad-459d-a0c8-eefbdbafebce",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       },
+       {
+        "id": "e39e6468-4347-4dc3-ba0d-b8ffa888ee1b",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       },
+       {
+        "id": "00ce3adb-6dad-4d84-ae84-ce2fa1b322cf",
+        "type": "scale",
+        "hex": "#FFD255",
+        "name": "Solid Yellow",
+        "value": 0
+       }
+      ],
+      "prefix": "",
+      "suffix": "°C",
+      "decimalPlaces": {
+       "isEnforced": true,
+       "digits": 1
+      },
+      "note": "",
+      "showNoteWhenEmpty": false,
+      "xColumn": "_time",
+      "generateXAxisTicks": [],
+      "xTotalTicks": 0,
+      "xTickStart": 0,
+      "xTickStep": 0,
+      "yColumn": "_value",
+      "generateYAxisTicks": [],
+      "yTotalTicks": 0,
+      "yTickStart": 0,
+      "yTickStep": 0,
+      "shadeBelow": true,
+      "position": "overlaid",
+      "timeFormat": "HH:mm",
+      "hoverDimension": "auto",
+      "legendColorizeRows": true,
+      "legendOpacity": 1,
+      "legendOrientationThreshold": 100000000
+     }
+    }
+   }
+  ]
+ },
+ "labels": []
+}
