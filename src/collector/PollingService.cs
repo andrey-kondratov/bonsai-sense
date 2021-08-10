@@ -16,6 +16,7 @@ namespace BonsaiSense.Collector
         private readonly ILogger<PollingService> _logger;
         private readonly CurrentState _currentState;
         private readonly PollingOptions _options;
+        private readonly IHostApplicationLifetime _appLifetime;
         private Adapter _adapter;
         private Device _device;
         private GattCharacteristic _externalTemperatureCharacteristic;
@@ -27,11 +28,13 @@ namespace BonsaiSense.Collector
         private GattCharacteristic _ledsValueCharacteristic;
 
         public PollingService(ILogger<PollingService> logger,
-            CurrentState currentState, IOptions<PollingOptions> options)
+            CurrentState currentState, IOptions<PollingOptions> options,
+            IHostApplicationLifetime appLifetime)
         {
             _logger = logger;
             _currentState = currentState;
             _options = options.Value;
+            _appLifetime = appLifetime;
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
@@ -76,8 +79,16 @@ namespace BonsaiSense.Collector
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Exception on starting discovery.");
+                OnException(exception, "starting discovery");
             }
+        }
+
+        private void OnException(Exception exception, string activity)
+        {
+            _logger.LogError(exception, activity);
+            
+            Environment.ExitCode = 1;
+            _appLifetime.StopApplication();
         }
 
         private async Task OnAdapterDeviceFoundAsync(Adapter sender, DeviceFoundEventArgs eventArgs)
@@ -118,7 +129,7 @@ namespace BonsaiSense.Collector
                 }
                 catch (Exception exception)
                 {
-                    _logger.LogError(exception, "Failed to stop the discovery.");
+                    _logger.LogWarning(exception, "Failed to stop the discovery.");
                 }
 
                 _device.Connected += OnDeviceConnectedAsync;
@@ -130,12 +141,12 @@ namespace BonsaiSense.Collector
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Error handling the DeviceFound event.");
-
                 _device = null;
                 eventArgs.Device.Connected -= OnDeviceConnectedAsync;
                 eventArgs.Device.Disconnected -= OnDeviceDisconnectedAsync;
                 eventArgs.Device.ServicesResolved -= OnDeviceServicesResolvedAsync;
+
+                OnException(exception, "handling the DeviceFound event");
             }
         }
 
@@ -156,7 +167,7 @@ namespace BonsaiSense.Collector
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Error handling the DeviceConnected event.");
+                OnException(exception, "handling the DeviceConnected event");
             }
         }
 
@@ -176,7 +187,7 @@ namespace BonsaiSense.Collector
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Error handling DeviceDisconnected event");
+                OnException(exception, "handling the DeviceDisconnected event");
             }
         }
 
@@ -289,7 +300,7 @@ namespace BonsaiSense.Collector
             }
             catch (Exception exception)
             {
-                _logger.LogError(exception, "Error handling ServicesResolved event.");
+                OnException(exception, "handling the ServicesResolved event");
             }
         }
 
